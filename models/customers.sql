@@ -1,23 +1,23 @@
 with customers as (
 
     select
-        customer_id,
-        first_name,
-        last_name
+        ID as customer_id,
+        FIRST_NAME as first_name,
+        LAST_NAME as last_name
 
-    from raw.jaffle_shop.customers
+    from `dbt-tutorial.jaffle_shop.customers`
 
 ),
 
 orders as (
 
     select
-        id as order_id,
-        user_id as customer_id,
-        order_date,
-        status
+        ID as order_id,
+        USER_ID as customer_id,
+        ORDER_DATE,
+        STATUS
 
-    from raw.jaffle_shop.orders
+    from `dbt-tutorial.jaffle_shop.orders`
 
 ),
 
