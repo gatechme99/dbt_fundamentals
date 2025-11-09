@@ -1,23 +1,12 @@
 with customers as (
 
-    select
-        ID as customer_id,
-        FIRST_NAME as first_name,
-        LAST_NAME as last_name
-
-    from `dbt-tutorial.jaffle_shop.customers`
+    select * from {{ ref('stg_jaffle_shop__customers') }}
 
 ),
 
 orders as (
 
-    select
-        ID as order_id,
-        USER_ID as customer_id,
-        ORDER_DATE,
-        STATUS
-
-    from `dbt-tutorial.jaffle_shop.orders`
+    select * from {{ ref('stg_jaffle_shop__orders') }}
 
 ),
 
