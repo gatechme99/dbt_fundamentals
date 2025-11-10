@@ -3,3 +3,8 @@ target/
 dbt_modules/
 logs/
 dbt_internal_packages/
+tests/
+integration_tests/
+macros/
+dbt_packages/
+package-lock.yml
